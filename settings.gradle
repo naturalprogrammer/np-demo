@@ -1,0 +1,2 @@
+include 'np-demo-spring-mvc-interceptor'
+rootProject.name = 'np-demo'
