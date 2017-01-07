@@ -1,5 +1,10 @@
 package com.naturalprogrammer.spring.di;
 
+import org.springframework.context.annotation.Profile;
+import org.springframework.stereotype.Component;
+
+@Component
+@Profile("dev")
 public class MockMailSender implements MailSender {
 
 	@Override

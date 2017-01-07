@@ -1,5 +1,6 @@
 package com.naturalprogrammer.spring.di;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,7 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/")
 public class RootController {
 	
-	private MailSender mailSender = new MockMailSender();
+	@Autowired
+	private MailSender mailSender;
 	
 	@GetMapping
 	public String index() {
